@@ -90,7 +90,7 @@ function main() {
     then = now;
 
     drawScene(gl, programInfo, buffers, cubeRotation);
-    cubeRotation += deltaTime;
+    //cubeRotation += deltaTime;
 
     //requestAnimationFrame(render);
   }
