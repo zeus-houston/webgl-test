@@ -92,9 +92,9 @@ function main() {
     drawScene(gl, programInfo, buffers, cubeRotation);
     cubeRotation += deltaTime;
 
-    requestAnimationFrame(render);
+    //requestAnimationFrame(render);
   }
-  requestAnimationFrame(render);
+  //requestAnimationFrame(render);
 }
 
 //
