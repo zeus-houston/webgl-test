@@ -4,12 +4,18 @@ import { drawScene } from "./draw-scene.js";
 let cubeRotation = 0.0;
 let deltaTime = 0;
 
-main();
+//module.exports = display
+
+display();
 
 //
 // start here
 //
-function main() {
+function display() {
+  const response = fetch("cube.obj");
+  response.text
+  //const text = response.text();
+
   const canvas = document.querySelector("#glcanvas");
   // Initialize the GL context
   const gl = canvas.getContext("webgl");
@@ -90,11 +96,11 @@ function main() {
     then = now;
 
     drawScene(gl, programInfo, buffers, cubeRotation);
-    //cubeRotation += deltaTime;
+    cubeRotation += deltaTime;
 
-    //requestAnimationFrame(render);
+    requestAnimationFrame(render);
   }
-  //requestAnimationFrame(render);
+  requestAnimationFrame(render);
 }
 
 //
